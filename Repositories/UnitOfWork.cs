@@ -14,7 +14,6 @@ public class UnitOfWork : IUnitOfWork
     private IPartidaRepository? _partidaRepository;
     
     public AppDbContext _context;
-    private IUnitOfWork _unitOfWorkImplementation;
 
     public UnitOfWork(AppDbContext context)
     {
