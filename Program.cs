@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using Clarify.Context;
+using Clarify.Middlewares;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.ConfigureExceptionHandler();
 
 app.UseAuthorization();
 
